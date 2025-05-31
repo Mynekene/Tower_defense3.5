@@ -92,7 +92,7 @@ while game:
             current_wave_mobs.append(Mob(path, wave, "boss"))
             boss_spawned_this_wave = True
         elif mob_spawn_timer >= mob_spawn_delay and mob_index < mobs_per_wave:
-            if random.random() < 0.1 + wave * 0.01 and wave >= 5:
+            if random.random() < wave * 0.01 and wave >= 5:
                 current_wave_mobs.append(Mob(path, wave, "miniboss"))
             else:
                 current_wave_mobs.append(Mob(path, wave, "normal"))
@@ -111,11 +111,11 @@ while game:
         for mob in current_wave_mobs:
             if mob.hp <= 0:
                 if mob.mob_type == "normal":
-                    player_money += 10
+                    player_money += 5 + wave
                 elif mob.mob_type == "miniboss":
-                    player_money += 50
+                    player_money += 25 + wave * 2
                 elif mob.mob_type == "boss":
-                    player_money += 100
+                    player_money += 50 + wave * 3
                 continue
             elif mob.current_point >= len(path) - 1:
                 if mob.mob_type == "boss":
