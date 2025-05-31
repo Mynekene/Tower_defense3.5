@@ -77,7 +77,7 @@ while game:
         mouse_pos = pygame.mouse.get_pos()
         for tower in towers:
             if math.hypot(tower.x - mouse_pos[0], tower.y - mouse_pos[1]) < 40:
-                sell_text = small_font.render(f"Sell: ${tower.sell_price}", True, WHITE)
+                sell_text = small_font.render(f"Sell: ${tower.sell_price}", True, ORANGE)
                 window.blit(sell_text, (tower.x - 25, tower.y - 100))
 
         if selected_tower_type is not None:
