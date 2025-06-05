@@ -14,8 +14,8 @@ rect_leave = leave_button_image.get_rect(topleft=(0, 0))
 
 rect_tower1 = tower_images[1].get_rect(topleft=(10, size_window[1] - 100))
 rect_tower2 = tower_images[2].get_rect(topleft=(100, size_window[1] - 110))
-rect_tower3 = tower_images[3].get_rect(topleft=(190, size_window[1] - 130))
-rect_tower4 = tower_images[4].get_rect(topleft=(280, size_window[1] - 160))
+rect_tower3 = tower_images[3].get_rect(topleft=(190, size_window[1] - 120))
+rect_tower4 = tower_images[4].get_rect(topleft=(280, size_window[1] - 125))
 
 wave = 1
 mob_spawn_timer = 0
@@ -26,7 +26,7 @@ current_wave_mobs = []
 towers = []
 selected_tower_type = None
 player_hp = 3
-player_money = 100
+player_money = 10000
 boss_spawned_this_wave = False
 
 game = True
@@ -52,7 +52,7 @@ while game:
                     towers.clear()
                     selected_tower_type = None
                     player_hp = 3
-                    player_money = 100
+                    player_money = 10000
                     boss_spawned_this_wave = False
                 elif rect_exit.collidepoint(x, y):
                     game = False

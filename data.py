@@ -6,8 +6,8 @@ pygame.init()
 size_window = (1024, 700)
 size_tower1 = (50, 100)
 size_tower2 = (60, 110)
-size_tower3 = (80, 130)
-size_tower4 = (110, 160)
+size_tower3 = (70, 120)
+size_tower4 = (80, 130)
 size_mob = (60, 60)
 size_miniboss = (90, 90)
 size_boss = (120, 120)
@@ -50,7 +50,7 @@ boss_image = pygame.transform.scale(pygame.image.load(os.path.join(image_folder,
 tower_image_1 = pygame.transform.scale(pygame.image.load(os.path.join(image_folder, "tower1.png")), size_tower1)
 tower_image_2 = pygame.transform.scale(pygame.image.load(os.path.join(image_folder, "tower2.png")), size_tower2)
 tower_image_3 = pygame.transform.scale(pygame.image.load(os.path.join(image_folder, "tower3.png")), size_tower3)
-tower_image_4 = pygame.transform.scale(pygame.image.load(os.path.join(image_folder, "tower3.png")), size_tower4)
+tower_image_4 = pygame.transform.scale(pygame.image.load(os.path.join(image_folder, "tower4.png")), size_tower4)
 
 tower_images = {
     1: tower_image_1,
